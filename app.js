@@ -18,7 +18,7 @@ if (process.env.DEV_ENV){
     mongoose.connect('mongodb://localhost/test-chirp');              //connect to Mongo
 }
 else{
-    mongoose.connect('mongodb://hlanxgcaecrsqi:CJnxlgT2_xRVpSrLqxnWiAU7Ou@ec2-54-225-111-9.compute-1.amazonaws.com:5432/dc2he1krfh29po');
+    mongoose.connect('mongodb://testing:testing@ds031647.mlab.com:31647/heroku_ldvzhqhm');
 }
 
 var app = express();
