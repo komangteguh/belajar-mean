@@ -15,10 +15,12 @@ var mongoose = require('mongoose');
 
 if (process.env.DEV_ENV){
                      //add for Mongo support
-mongoose.connect('mongodb://localhost/test-chirp');              //connect to Mongo
+    mongoose.connect('mongodb://localhost/test-chirp');              //connect to Mongo
 }
-    mongoose.connect('postgres://hlanxgcaecrsqi:CJnxlgT2_xRVpSrLqxnWiAU7Ou@ec2-54-225-111-9.compute-1.amazonaws.com:5432/dc2he1krfh29po');
+else{
+    mongoose.connect('mongodb://hlanxgcaecrsqi:CJnxlgT2_xRVpSrLqxnWiAU7Ou@ec2-54-225-111-9.compute-1.amazonaws.com:5432/dc2he1krfh29po');
 }
+
 var app = express();
 
 // view engine setup
