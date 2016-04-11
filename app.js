@@ -13,13 +13,7 @@ var index = require('./routes/index');
 var authenticate = require('./routes/authenticate')(passport);
 var mongoose = require('mongoose');    
 
-if (process.env.DEV_ENV){
-                     //add for Mongo support
-    mongoose.connect('mongodb://localhost/test-chirp');              //connect to Mongo
-}
-else{
-    mongoose.connect('mongodb://heroku_ldvzhqhm:ck7o7n5j0bv49kgj4vdfq4f57q@ds031647.mlab.com:31647/heroku_ldvzhqhm');
-}
+mongoose.connect('mongodb://heroku_ldvzhqhm:ck7o7n5j0bv49kgj4vdfq4f57q@ds031647.mlab.com:31647/heroku_ldvzhqhm');
 
 var app = express();
 
